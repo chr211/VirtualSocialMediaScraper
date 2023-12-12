@@ -94,7 +94,7 @@ def main():
     loginChirpy = 'http://chirpyhub.com/login'
     searchURLChirpy = 'http://chirpyhub.com/'
 
-    #default credentials can be changed later at run time
+    #default credentials can be changed later at run time. These aren't encrypted - they are throw-away example credentials.
     userMail = 'bob@painter.com'
     userChirpy = 'bobloblaw'
     userPass = 'bobrossisapainterA7!'
