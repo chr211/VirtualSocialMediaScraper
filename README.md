@@ -12,6 +12,9 @@ Professor Jordan VanHoy
 
 November 14, 2020
 
+[![Demo video thumbnail](https://img.youtube.com/vi/VIDEO_ID/hqdefault.jpg)]([https://youtu.be/VIDEO_ID](https://youtu.be/1iQQZikABaI))
+
+
 # Table of Contents
 
 # List of Figures
