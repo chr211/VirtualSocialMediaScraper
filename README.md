@@ -12,7 +12,7 @@ Professor Jordan VanHoy
 
 November 14, 2020
 
-[Watch the demo on YouTube]([[https://youtu.be/VIDEO_ID](https://youtu.be/1iQQZikABaI)](https://youtu.be/1iQQZikABaI))
+[Watch the demo on YouTube](https://youtu.be/1iQQZikABaI)
 
 
 # Table of Contents
