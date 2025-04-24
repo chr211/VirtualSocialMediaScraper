@@ -74,25 +74,25 @@ These libraries can be used to collect open source information on social media s
 
 **Figure ****1** Social Park HTML login tags
 
-![Figure 1](image_8.png)
+![Figure 1](img/image_8.png)
 
 First, the html tags for the login boxes need to be found so that they can be used as targets for automated login. This is done by inspecting each element in a browser’s developer tab. (See figure 1.) When submitting the form it is necessary to analyze the network window in the developers tab to see how the data is submitted. In the case of Socialpark, there is an additional piece of data called __requestVerificationToken that needs to be scraped and submitted on login. (See figure 2.)
 
 **Figure ****2**** **Socialpark login token.
 
-![Figure 2](img_docx/image_6.png)
+![Figure 2](img/image_6.png)
 
 The code in figure 3 below opens a session to Socialpark and uses the BeautifulSoup library to parse out the session cookie and then login. Next, it searches for a post with a direct website address rather than using the search box. Above the value “cyberapolis%20power” is the search term, but this may be replaced with a variable. Finally, Beautifulsoup is used to extract a list of authors from the results by searching for div tags with class names of “author-name”. This method works will only work for one page of results as Socialpark requires the user to click a button to load more. A library like Selenium is required to create actions in order to automate button click to retrieve the complete result list. Selenium’s html parsing interface is similar to Beautifulsoup, but it requires a browser driver to automate actions.
 
 **Figure ****3**** **Beautiful Soup login example.
 
-![Figure 3](img_docx/image_5.png)
+![Figure 3](img/image_5.png)
 
 Seen below is an alternate login method for Socialpark which uses Selenium’s ‘send_keys’ and click methods to interact with the website in addition to supporting the execution of Javascript (See figure 4.) There is no need for the requests library and no need to keep track of login tokens as the driver manages this for the user.
 
 **Figure ****4**** **Using Selenium to send login data.
 
-![Figure 4](img_docx/image_3.png)
+![Figure 4](img/image_3.png)
 
 # OSINT Data Processing and Analysis with Python
 
@@ -126,25 +126,25 @@ The multiprocessing library is easy to implement on a single machine for non-dep
 
 **Figure ****5**** **Single Processing implementation.
 
-![Figure 5](img_docx/image_2.png)
+![Figure 5](img/image_2.png)
 
 The original single-process program hashed 23Gb or 4590 files in 211 seconds (See Figure 6.)
 
 **Figure ****6**** **Time taken for single process implementation.
 
-![Figure 6](img_docx/image_1.png)
+![Figure 6](img/image_1.png)
 
 Next, multiprocessing capabilities were added to the function. First, a Pool object was created and initialized the number of parallel processes to 12; this is the number of logical cores in this particular processor which can be found using the function cpu_count (Hosmer, 2015). Func is set to a partial function whose arguments never change (root and dirList are passed in case relative directory search is used versus absolute in the future). Partial is necessary because map technically only takes one argument for a function and this works around that limitation. This function is passed to the map function with an iterable object that is passed to a new separate multiHash function for each file entry. The multiprocessor map function creates a new process for each core from an entry in the iterable fileList. All of the separate spawned process’ return values are returned in one list stored in hashEntryList (See Figure 7.)
 
 **Figure ****7**** **Multiprocessing of a hash function.
 
-![Figure 7](img_docx/image_7.png)
+![Figure 7](img/image_7.png)
 
 These changes above enable the hashes to be processes in parallel, reducing the time taken from 211 seconds to 66 seconds to process 23Gb (See Figure 8.)
 
 **Figure ****8**** **Time taken to hash using multiprocessing.
 
-![Figure 8](img_docx/image_4.png)
+![Figure 8](img/image_4.png)
 
 Note that there is an issue in the multiprocessing library when running in Windows that requires any function passed to map to be imported rather than within the calling module (Python, 2015).
 
