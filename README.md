@@ -74,7 +74,7 @@ These libraries can be used to collect open source information on social media s
 
 **Figure ****1** Social Park HTML login tags
 
-![Figure 1](img_docx/image_8.png)
+![Figure 1](image_8.png)
 
 First, the html tags for the login boxes need to be found so that they can be used as targets for automated login. This is done by inspecting each element in a browser’s developer tab. (See figure 1.) When submitting the form it is necessary to analyze the network window in the developers tab to see how the data is submitted. In the case of Socialpark, there is an additional piece of data called __requestVerificationToken that needs to be scraped and submitted on login. (See figure 2.)
 
